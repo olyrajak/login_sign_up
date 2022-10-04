@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <title>Login & registration Form</title>
+</head>
+
+<body>
+    <h1>Login & registration Form</h1>
+
+
+    <div class="content">
+        <div class="container">
+            <img class="bg-img" src="https://mariongrandvincent.github.io/HTML-Personal-website/img-codePen/bg.jpg" alt="">
+            <div class="menu">
+                <a href="#connexion" class="btn-connexion">
+                    <h2>SIGN IN</h2>
+                </a>
+                <a href="#enregistrer" class="btn-enregistrer active">
+                    <h2>SIGN UP</h2>
+                </a>
+            </div>
+            <div class="connexion">
+                <div class="contact-form">
+                    <label>USERNAME</label>
+                    <input placeholder="" type="text">
+
+                    <label>PASSWORD</label>
+                    <input placeholder="" type="text">
+
+
+
+                    <input class="submit" value="SIGN IN" type="submit">
+                </div>
+
+                <hr>
+
+            </div>
+
+            <div class="enregistrer active-section">
+                <div class="contact-form">
+                    <label>USERNAME</label>
+                    <input placeholder="" type="text">
+
+                    <label>E-MAIL</label>
+                    <input placeholder="" type="text">
+
+                    <label>PASSWORD</label>
+                    <input placeholder="" type="text">
+
+                    <label>CONFIRM PASSWORD</label>
+                    <input placeholder="" type="text">
+
+
+
+                    <input class="submit" value="SIGN UP" type="submit">
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+</body>
+<script>
+    $('.btn-enregistrer').click(function() {
+        $('.connexion').addClass('remove-section');
+        $('.enregistrer').removeClass('active-section');
+        $('.btn-enregistrer').removeClass('active');
+        $('.btn-connexion').addClass('active');
+    });
+
+    $('.btn-connexion').click(function() {
+        $('.connexion').removeClass('remove-section');
+        $('.enregistrer').addClass('active-section');
+        $('.btn-enregistrer').addClass('active');
+        $('.btn-connexion').removeClass('active');
+    });
+</script>
+
+</html>
